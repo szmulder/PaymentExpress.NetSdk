@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PaymentExpress.NetSdk</id>
+    <version>1.0.0</version>
+    <title>PaymentExpress NetSdk</title>
+    <authors>NZMK.com</authors>
+    <owners>mulder</owners>
+    <licenseUrl>https://github.com/szmulder/PaymentExpress.NetSdk</licenseUrl>
+    <projectUrl>https://github.com/szmulder/PaymentExpress.NetSdk</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Support PaymentExpress pxpay2.0 solution</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>PaymentExpress pxpay2.0 .netcore</tags>
+    <dependencies>
+      <dependency id="System.ComponentModel.Primitives" version="4.3.0" />
+      <dependency id="System.Net.Requests" version="4.3.0" />
+      <dependency id="System.Runtime.Serialization.Formatters" version="4.3.0" />
+      <dependency id="System.Xml.XmlDocument" version="4.3.0" />
+      <dependency id="System.Xml.XmlSerializer" version="4.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard1.3\PaymentExpressProxy.dll" target="lib\netstandard1.3\PaymentExpressProxy.dll" />
+    <file src="bin\Release\netstandard1.3\PaymentExpressProxy.deps.json" target="lib\netstandard1.3\PaymentExpressProxy.deps.json" />
+  </files>
+</package>
