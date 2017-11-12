@@ -1,14 +1,31 @@
 # PaymentExpress
 
 Support the pxpay2.0 solution
+http://www.paymentexpress.com/document/pxecom_pxpay_2_0_integrationguide.pdf
 
 
 ## Instructions
 
 ### How to use it
 ```c
+
+using PaymentExpressProxy;
+
+
 public class PaymentProvider
     {
+		/// <summary>
+        /// In the PaymentSuccess page, call this method
+		/// var paymentResponseModel = default(PaymentResponseModel);
+        ///    //Get payment express result
+        ///    string result = Request.QueryString["result"];
+		///	   var paymentProvider = new PaymentProvider();
+        ///    var response = paymentProvider.GetPaymentExpressResponse(result);
+		///    if (response != null && response.Success)
+        ///    {...
+		/// </summary>
+        /// <param name="entityInput"> Your Order detail.</param>
+        /// <returns>Returns string object.</returns>
         public TransactionResponse GetPaymentExpressResponse(string result)
         {
             var paymentExpressSetting = new PaymentExpressSetting();
@@ -25,9 +42,20 @@ public class PaymentProvider
             return paymentProxy.GetResponse(result);
         }
 
-        public string GetPaymentExpressHostUrl(PaymentUrl paymentUrl, Order order)
+		/// <summary>
+        /// Get GetPaymentExpress Host Url, and you need redirect to the Url
+		/// </summary>
+        /// <param name="entityInput"> Your Order detail.</param>
+        /// <returns>Returns string object.</returns>
+        public string GetPaymentExpressHostUrl(Order order)
         {
             string url = "";
+
+			var paymentUrl = new PaymentUrl()
+			{
+				PaymentGatewayUrlSuccess = "PaymentSuccess Url",
+				PaymentGatewayUrlFail = "PaymentFail Url"
+			};
 
             var paymentExpressSetting = new PaymentExpressSetting();
             var paymentProxy = new PaymentProxy()
@@ -51,7 +79,7 @@ public class PaymentProvider
                 TxnData1 = order.BillingName,
                 TxnData2 = order.BillingPhone,
                 TxnData3 = order.UserId.ToString(),
-                EmailAddress = order.User.Email
+                EmailAddress = order.Email
             };
 
             url = paymentProxy.RequestUrl(generateRequest);
@@ -59,6 +87,13 @@ public class PaymentProvider
             return url;
         }
 	|}
+
+public class PaymentUrl
+    {
+        public string PaymentGatewayUrlSuccess { get; set; }
+
+        public string PaymentGatewayUrlFail { get; set; }
+    }
 
 public class PaymentExpressSetting
     {
