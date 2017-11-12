@@ -6,7 +6,7 @@ Support the pxpay2.0 solution
 ## Instructions
 
 ### How to use it
-
+```c
 public class PaymentProvider
     {
         public TransactionResponse GetPaymentExpressResponse(string result)
@@ -67,8 +67,8 @@ public class PaymentExpressSetting
             EnableOnlinePayment = false;
             AdditionalFeePercentage = 0.03;
             AdditionalFeeFixCharge = 0;
-            PxPayUserId = string.Empty;
-            PxPayKey = string.Empty;
+            PxPayUserId = "put-your-PxPay-userId";
+            PxPayKey = "put-your-PxPay-Key";
         }
 
         [Display(Name = "Enable Online Payment")]
@@ -84,3 +84,4 @@ public class PaymentExpressSetting
 
         public string PxPayKey { get; set; }
     }
+```
