@@ -1,0 +1,38 @@
+﻿@using TestMvcCore.Models
+@model TestMvcCore.Models.Order
+
+<div class="container">
+    <h1>Shopping Cart @Model.UserName</h1><hr>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <th>Item</th>
+                <th>QTY</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+            </tr>
+            @Html.EditorFor(model => model.OrderItems)
+            <tr>
+                <th colspan="3"><span class="pull-right">Sub Total</span></th>
+                <th>@Model.SubTotal.ToString("C")</th>
+            </tr>
+            <tr>
+                <th colspan="3"><span class="pull-right">VAT 20%</span></th>
+                <th>@Model.Vat.ToString("C")</th>
+            </tr>
+            <tr>
+                <th colspan="3"><span class="pull-right">Total</span></th>
+                <th>@Model.Total.ToString("C")</th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="btn btn-primary">Continue Shopping</a>
+                </td>
+                <td colspan="3">
+                    <a asp-area="" asp-controller="ShoppingCart" asp-action="Pay" class="pull-right btn btn-success">Pay</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

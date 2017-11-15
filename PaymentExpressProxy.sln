@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMvcCore", "TestMvcCore\TestMvcCore.csproj", "{4D1BEE7A-AED1-47F3-915E-99742451A952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10CF0C3F-DD6F-4A15-8F99-E12226775FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10CF0C3F-DD6F-4A15-8F99-E12226775FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10CF0C3F-DD6F-4A15-8F99-E12226775FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1BEE7A-AED1-47F3-915E-99742451A952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1BEE7A-AED1-47F3-915E-99742451A952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1BEE7A-AED1-47F3-915E-99742451A952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1BEE7A-AED1-47F3-915E-99742451A952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

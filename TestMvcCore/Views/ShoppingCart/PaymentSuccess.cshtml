@@ -1,0 +1,18 @@
+﻿@model  PaymentExpressProxy.TransactionResponse
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    ×
+                </button>
+                <span class="glyphicon glyphicon-ok"></span> <strong>Success Message</strong>
+                <hr class="message-inner-separator">
+                <p>
+                    You successfully Paid @Model.AmountSettlement.ToString("C") the Order Id #@Model.MerchantReference.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
