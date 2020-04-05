@@ -1,0 +1,8 @@
+﻿@model TestMvcCore.Models.OrderItem
+
+<tr>
+    <td>@Model.ProductDesc</td>
+    <td>@Model.Quantity <a href="#">X</a></td>
+    <td>@Model.UnitPrice.ToString("C") </td>
+    <td>@Model.TotalPrice.ToString("C") </td>
+</tr>
