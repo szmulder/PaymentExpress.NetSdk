@@ -1,7 +1,10 @@
 # PaymentExpress
 
 Support the pxpay2.0 solution
-http://www.paymentexpress.com/document/pxecom_pxpay_2_0_integrationguide.pdf
+https://www.windcave.com/Document/PXECOM_PXPay_2_0_IntegrationGuide.pdf
+
+Test card numbers
+https://www.windcave.com/support-merchant-frequently-asked-questions-testing-details
 
 
 ## Instructions
@@ -15,7 +18,7 @@ You need edit the appsettings.json
   "PaymentExpressSettings": {
     "PxPayUserId": "your PxPayUserId",
     "PxPayKey": "your PxPayKey",
-    "RequestUrl": "https://sec.paymentexpress.com/pxaccess/pxpay.aspx"
+    "RequestUrl": "https://sec.windcave.com/pxaccess/pxpay.aspx."
   }...
 ```
 
