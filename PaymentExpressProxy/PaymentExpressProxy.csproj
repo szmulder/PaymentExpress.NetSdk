@@ -1,7 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard1.6;net48</TargetFrameworks>
+    <AssemblyVersion>1.1.4.0</AssemblyVersion>
+    <Version>1.1.4</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Support PaymentExpress pxpay2.0 solution</Description>
+    <Authors>NZMK.com</Authors>
+    <PackageId>PaymentExpress.NetSdk</PackageId>
+    <PackageProjectUrl>https://github.com/szmulder/PaymentExpress.NetSdk</PackageProjectUrl>
+    <Copyright>Copyright 2020</Copyright>
+    <RepositoryUrl>https://github.com/szmulder/PaymentExpress.NetSdk</RepositoryUrl>
+    <PackageTags>PaymentExpress pxpay2.0 .netcore</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

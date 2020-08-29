@@ -51,12 +51,6 @@ namespace PaymentExpressProxy
         {
         }
 
-        public GenerateRequest(string pxPayUserId, string pxPayKey)
-        {
-            PxPayUserId = pxPayUserId;
-            PxPayKey = pxPayKey;
-        }
-
         public string ToXml()
         {
             var ms = new MemoryStream();
